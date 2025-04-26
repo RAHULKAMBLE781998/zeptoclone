@@ -1,0 +1,288 @@
+# Zepto Clone - UI Design & Wireframes
+
+## Color Scheme
+
+We'll use a modern, clean color palette:
+- **Primary**: #7E22CE (Bold purple - Zepto-inspired)
+- **Secondary**: #10B981 (Green for deals, discounts, CTAs)
+- **Accent**: #F97316 (Orange for promotions)
+- **Background**: #FFFFFF (White)
+- **Text**: #1F2937 (Dark gray)
+- **Light Gray**: #F3F4F6 (For backgrounds, separators)
+- **Error**: #EF4444 (Red for error states)
+
+## Typography
+
+- **Primary Font**: Inter (Sans-serif, modern and highly readable)
+- **Headings**: Inter SemiBold
+- **Body**: Inter Regular
+- **Font Sizes**:
+  - Headings: 18px-24px
+  - Body: 14px-16px
+  - Small text: 12px
+
+## Common UI Elements
+
+### Header
+- Fixed position at top
+- Logo on left
+- Location selector in middle
+- Profile and cart icons on right
+- Search bar below header on main screens
+
+### Bottom Navigation (Mobile)
+- Home
+- Search
+- Categories
+- Cart
+- Account
+
+### Product Cards
+- Square product image
+- Product name
+- Weight/quantity
+- Price with strike-through for original price if discounted
+- Add to cart button
+
+## Key Screen Wireframes
+
+### 1. Home Screen
+```
+┌────────────────────────────────┐
+│ ◉ LOGO   📍 LOCATION    👤 🛒 │
+│                                │
+│ 🔍 Search for groceries...     │
+│                                │
+│ Deliver in 10 minutes 🚀       │
+│                                │
+│ ┌──────┐┌──────┐┌──────┐      │
+│ │FRUITS││DAIRY ││BAKERY│ ➡️   │
+│ └──────┘└──────┘└──────┘      │
+│                                │
+│ DEALS OF THE DAY               │
+│ ┌──────┐┌──────┐┌──────┐      │
+│ │ ITEM ││ ITEM ││ ITEM │ ➡️   │
+│ │ 30%⬇️││ 20%⬇️││ 15%⬇️│      │
+│ └──────┘└──────┘└──────┘      │
+│                                │
+│ MOST POPULAR                   │
+│ ┌──────┐┌──────┐┌──────┐      │
+│ │ ITEM ││ ITEM ││ ITEM │ ➡️   │
+│ │ $3.99││ $2.49││ $1.99│      │
+│ └──────┘└──────┘└──────┘      │
+│                                │
+│ 🏠  🔍  📋  🛒  👤           │
+└────────────────────────────────┘
+```
+
+### 2. Category/Search Results Screen
+```
+┌────────────────────────────────┐
+│ ◀️  Category Name        🔍    │
+│                                │
+│ 🔄 Sort  🔽 Filter             │
+│                                │
+│ ┌──────────────────────────┐   │
+│ │ ┌────┐ Product Name      │   │
+│ │ │    │ 500g              │   │
+│ │ │ 🍎 │ $2.99   $3.49     │   │
+│ │ │    │        [  +  ]    │   │
+│ │ └────┘                   │   │
+│ └──────────────────────────┘   │
+│                                │
+│ ┌──────────────────────────┐   │
+│ │ ┌────┐ Product Name      │   │
+│ │ │    │ 250ml             │   │
+│ │ │ 🥛 │ $1.49             │   │
+│ │ │    │        [  +  ]    │   │
+│ │ └────┘                   │   │
+│ └──────────────────────────┘   │
+│                                │
+│ ┌──────────────────────────┐   │
+│ │ ┌────┐ Product Name      │   │
+│ │ │    │ 1kg               │   │
+│ │ │ 🥔 │ $4.99   $5.99     │   │
+│ │ │    │        [  +  ]    │   │
+│ │ └────┘                   │   │
+│ └──────────────────────────┘   │
+│                                │
+│ 🏠  🔍  📋  🛒  👤           │
+└────────────────────────────────┘
+```
+
+### 3. Product Detail Screen
+```
+┌────────────────────────────────┐
+│ ◀️  Product Details      🔍    │
+│                                │
+│ ┌────────────────────────────┐ │
+│ │                            │ │
+│ │            🍎              │ │
+│ │                            │ │
+│ └────────────────────────────┘ │
+│                                │
+│ Product Name                   │
+│ 500g                           │
+│                                │
+│ $2.99   $3.49 (15% OFF)        │
+│                                │
+│ About This Product             │
+│ Lorem ipsum dolor sit amet,    │
+│ consectetur adipiscing elit.   │
+│                                │
+│ Nutritional Information        │
+│ • Calories: 110                │
+│ • Protein: 2g                  │
+│ • Carbs: 25g                   │
+│                                │
+│ ┌────────────────────────────┐ │
+│ │ [-]     1     [+]   ADD    │ │
+│ └────────────────────────────┘ │
+│                                │
+│ Similar Products               │
+│ ┌────┐┌────┐┌────┐            │
+│ │ 🍏 ││ 🍊 ││ 🍇 │     ➡️    │
+│ └────┘└────┘└────┘            │
+│                                │
+│ 🏠  🔍  📋  🛒  👤           │
+└────────────────────────────────┘
+```
+
+### 4. Cart Screen
+```
+┌────────────────────────────────┐
+│ ◀️      Your Cart         🗑️  │
+│                                │
+│ ┌──────────────────────────┐   │
+│ │ ┌────┐ Product Name      │   │
+│ │ │    │ 500g      [$1.99] │   │
+│ │ │ 🍎 │                   │   │
+│ │ │    │ [-]  1  [+]       │   │
+│ │ └────┘                   │   │
+│ └──────────────────────────┘   │
+│                                │
+│ ┌──────────────────────────┐   │
+│ │ ┌────┐ Product Name      │   │
+│ │ │    │ 1L        [$2.49] │   │
+│ │ │ 🥛 │                   │   │
+│ │ │    │ [-]  2  [+]       │   │
+│ │ └────┘                   │   │
+│ └──────────────────────────┘   │
+│                                │
+│ Bill Details                   │
+│ Item Total         $6.97       │
+│ Delivery Fee       $1.99       │
+│ ─────────────────────────      │
+│ To Pay             $8.96       │
+│                                │
+│ ┌────────────────────────────┐ │
+│ │  PROCEED TO CHECKOUT       │ │
+│ └────────────────────────────┘ │
+│                                │
+│ 🏠  🔍  📋  🛒  👤           │
+└────────────────────────────────┘
+```
+
+### 5. Checkout Screen
+```
+┌────────────────────────────────┐
+│ ◀️     Checkout               │
+│                                │
+│ Delivery Address               │
+│ ┌──────────────────────────┐   │
+│ │ 123 Main St, Apt 4B      │   │
+│ │ New York, NY 10001       │   │
+│ │                  [Change]│   │
+│ └──────────────────────────┘   │
+│                                │
+│ Delivery Time                  │
+│ ┌──────────────────────────┐   │
+│ │ 10-15 min                │   │
+│ │ Express Delivery         │   │
+│ └──────────────────────────┘   │
+│                                │
+│ Payment Method                 │
+│ ┌──────────────────────────┐   │
+│ │ ○ Credit Card            │   │
+│ │ ● Cash on Delivery       │   │
+│ │ ○ UPI                    │   │
+│ └──────────────────────────┘   │
+│                                │
+│ Order Summary                  │
+│ Items (3)          $6.97       │
+│ Delivery Fee        $1.99      │
+│ ─────────────────────────      │
+│ Total              $8.96       │
+│                                │
+│ ┌────────────────────────────┐ │
+│ │      PLACE ORDER           │ │
+│ └────────────────────────────┘ │
+└────────────────────────────────┘
+```
+
+### 6. Order Tracking Screen
+```
+┌────────────────────────────────┐
+│ ◀️     Track Order            │
+│                                │
+│ Order #ZEP12345                │
+│ Arriving in 8 minutes          │
+│                                │
+│ ┌────────────────────────────┐ │
+│ │ [✓] Order Placed           │ │
+│ │  |                         │ │
+│ │ [✓] Order Packed           │ │
+│ │  |                         │ │
+│ │ [●] Out for Delivery       │ │
+│ │  |                         │ │
+│ │ [ ] Delivered              │ │
+│ └────────────────────────────┘ │
+│                                │
+│ Delivery Partner               │
+│ ┌────────────────────────────┐ │
+│ │ 👤 John D.                 │ │
+│ │                     📞 📱  │ │
+│ └────────────────────────────┘ │
+│                                │
+│ ┌────────────────────────────┐ │
+│ │     View Order Details     │ │
+│ └────────────────────────────┘ │
+│                                │
+│ 🏠  🔍  📋  🛒  👤           │
+└────────────────────────────────┘
+```
+
+### 7. User Profile Screen
+```
+┌────────────────────────────────┐
+│ ◀️      My Account             │
+│                                │
+│ ┌────────────────────────────┐ │
+│ │          👤                │ │
+│ │       John Doe             │ │
+│ │     +1 (123) 456-7890      │ │
+│ └────────────────────────────┘ │
+│                                │
+│ ┌────────────────────────────┐ │
+│ │ 📦 My Orders              >│ │
+│ └────────────────────────────┘ │
+│                                │
+│ ┌────────────────────────────┐ │
+│ │ 📍 My Addresses           >│ │
+│ └────────────────────────────┘ │
+│                                │
+│ ┌────────────────────────────┐ │
+│ │ 💳 Payment Methods        >│ │
+│ └────────────────────────────┘ │
+│                                │
+│ ┌────────────────────────────┐ │
+│ │ ⚙️ Settings               >│ │
+│ └────────────────────────────┘ │
+│                                │
+│ ┌────────────────────────────┐ │
+│ │        LOG OUT             │ │
+│ └────────────────────────────┘ │
+│                                │
+│ 🏠  🔍  📋  🛒  👤           │
+└────────────────────────────────┘
+```

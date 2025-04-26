@@ -1,0 +1,82 @@
+# Zepto Clone - Component Structure
+
+## Pages
+1. **Landing/Home Page** (`HomePage.jsx`)
+   - Header with location selector
+   - Hero section with delivery time promise
+   - Categories section
+   - Featured products carousel
+   - Deals of the day
+   - Recent orders (if logged in)
+
+2. **Authentication Pages**
+   - Login Page (`LoginPage.jsx`)
+   - Signup Page (`SignupPage.jsx`)
+   - OTP Verification (`OtpVerificationPage.jsx`)
+
+3. **Category Page** (`CategoryPage.jsx`)
+   - Products filtered by category
+   - Sorting and filtering options
+
+4. **Search Results** (`SearchResultsPage.jsx`)
+   - Search bar with suggestions
+   - Filtered products based on search query
+
+5. **Product Detail Page** (`ProductDetailPage.jsx`)
+   - Product images
+   - Product details (name, price, description)
+   - Quantity selector
+   - Add to cart button
+   - Similar products
+
+6. **Cart Page** (`CartPage.jsx`)
+   - Cart items list
+   - Price summary
+   - Delivery time estimation
+   - Checkout button
+
+7. **Checkout Page** (`CheckoutPage.jsx`)
+   - Address selection/entry
+   - Payment method selection
+   - Order summary
+   - Place order button
+
+8. **Order Tracking Page** (`OrderTrackingPage.jsx`)
+   - Order status
+   - Live tracking (simulated)
+   - Delivery person details
+   - Estimated delivery time
+
+9. **User Profile** (`ProfilePage.jsx`)
+   - Personal information
+   - Saved addresses
+   - Payment methods
+   - Order history
+
+## Reusable Components
+
+1. **Layout Components**
+   - `Navbar.jsx` - Main navigation bar with logo, search, location, cart
+   - `Footer.jsx` - App footer with links, policies, contact
+   - `BottomNavigation.jsx` - Mobile bottom navigation
+
+2. **UI Components**
+   - `ProductCard.jsx` - Reusable product display card
+   - `CategoryCard.jsx` - Category display component
+   - `Button.jsx` - Reusable button component
+   - `AddToCartButton.jsx` - Add/remove items
+   - `QuantitySelector.jsx` - Increase/decrease quantity
+   - `SearchBar.jsx` - Search input with suggestions
+   - `LoadingSpinner.jsx` - Loading indicator
+   - `ErrorMessage.jsx` - Error display
+   - `DeliveryTimer.jsx` - Shows estimated delivery time
+   - `PriceTag.jsx` - Displays prices with discounts
+   - `AddressCard.jsx` - Displays saved addresses
+   - `OrderCard.jsx` - Summary card for past/current orders
+   - `Modal.jsx` - Reusable modal/popup component
+   - `LocationSelector.jsx` - Select/change delivery location
+
+3. **Context Providers**
+   - `AuthContext.jsx` - Authentication state management
+   - `CartContext.jsx` - Shopping cart state management
+   - `LocationContext.jsx` - User location managements
