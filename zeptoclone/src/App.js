@@ -3,14 +3,14 @@ import './App.css';
 import ProductCard from './components/ProductCard';
 import Login from './components/Login';
 import { products } from './data/products';
+import { AuthProvider, useAuth } from './components/AuthProvider';
 
 function App() {
   const [cart, setCart] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [searchQuery, setSearchQuery] = useState('');
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const [user, setUser] = useState(null);
   const [showUserMenu, setShowUserMenu] = useState(false);
+  const { user, logout } = useAuth();
 
   const categories = ['All', 'Fruits', 'Vegetables', 'Dairy', 'Bakery'];
   const navTabs = ['Home', 'Categories', 'Deals', 'My Orders'];
@@ -23,19 +23,13 @@ function App() {
     setCart([...cart, product]);
   };
 
-  const handleLogin = (userData) => {
-    setIsLoggedIn(true);
-    setUser(userData);
-  };
-
   const handleLogout = () => {
-    setIsLoggedIn(false);
-    setUser(null);
+    logout();
     setShowUserMenu(false);
   };
 
-  if (!isLoggedIn) {
-    return <Login onLogin={handleLogin} />;
+  if (!user) {
+    return <Login />;
   }
 
   return (
@@ -228,4 +222,12 @@ function App() {
   );
 }
 
-export default App;
+function AppWrapper() {
+  return (
+    <AuthProvider>
+      <App />
+    </AuthProvider>
+  );
+}
+
+export default AppWrapper;
