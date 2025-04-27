@@ -6,8 +6,6 @@ import { AuthProvider } from './context/AuthContext'; // You might still use aut
 import { calculateTotals } from './store/store';
 
 
-
-import Home from './components/Home';
 import Navbar from './components/Navbar';
 import Footer from './components/layout/Footer';
 import BottomNavigation from './components/layout/BottomNavigation';
@@ -15,6 +13,8 @@ import BottomNavigation from './components/layout/BottomNavigation';
 // Pages
 import HomePage from './pages/Home/HomePage';
 import LoginPage from './pages/Auth/LoginPage';
+
+
 import SignupPage from './pages/Auth/SignupPage';
 import CategoryPage from './pages/Category/CategoryPage';
 import ProductDetailPage from './pages/ProductDetail/ProductDetailPage';
