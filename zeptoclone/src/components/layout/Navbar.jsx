@@ -1,8 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 import { ShoppingCart, MapPin, Search } from 'lucide-react';
 
 const Navbar = () => {
+  const cartItems = useSelector((state) => state.cart.items);
+
   return (
     <nav className="bg-white shadow-sm fixed w-full top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -33,7 +36,7 @@ const Navbar = () => {
             <Link to="/cart" className="relative">
               <ShoppingCart className="h-6 w-6 text-gray-600" />
               <span className="absolute -top-2 -right-2 bg-primary text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
-                0
+                {cartItems.length}
               </span>
             </Link>
           </div>

@@ -1,10 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { useCart } from '../../context/CartContext';
+import { useSelector, useDispatch } from 'react-redux';
 import { Trash, ArrowLeft } from 'lucide-react';
+import { updateQuantity, removeItemFromCart } from '../../store/store';
 
 const CartPage = () => {
-  const { cart, removeFromCart, updateQuantity } = useCart();
+  const cart = useSelector((state) => state.cart);
+  const dispatch = useDispatch();
+
+  
 
   if (cart.items.length === 0) {
     return (
@@ -48,14 +52,14 @@ const CartPage = () => {
                   <p className="text-sm text-gray-500">{item.unit}</p>
                   <div className="mt-2 flex items-center">
                     <button
-                      onClick={() => updateQuantity(item.id, item.quantity - 1)}
+                      onClick={() => dispatch(updateQuantity(item.id, item.quantity - 1))}
                       className="text-gray-500 hover:text-gray-700"
                     >
                       -
                     </button>
                     <span className="mx-2 text-gray-900">{item.quantity}</span>
                     <button
-                      onClick={() => updateQuantity(item.id, item.quantity + 1)}
+                      onClick={() => dispatch(updateQuantity(item.id, item.quantity + 1))}
                       className="text-gray-500 hover:text-gray-700"
                     >
                       +
@@ -67,7 +71,7 @@ const CartPage = () => {
                     ${(item.price * item.quantity).toFixed(2)}
                   </p>
                   <button
-                    onClick={() => removeFromCart(item.id)}
+                    onClick={() => dispatch(removeItemFromCart(item.id))}
                     className="mt-2 text-red-500 hover:text-red-700"
                   >
                     <Trash className="h-5 w-5" />

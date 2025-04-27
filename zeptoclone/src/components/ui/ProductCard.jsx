@@ -1,8 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ShoppingCart } from 'lucide-react';
+import { useDispatch } from 'react-redux';
+import { addItemToCart } from '../../store/store';
 
 const ProductCard = ({ product }) => {
+  const dispatch = useDispatch();
+
   const {
     id,
     name,
@@ -52,12 +56,14 @@ const ProductCard = ({ product }) => {
           </div>
 
           <button
+            onClick={() => dispatch(addItemToCart(product))}
             className={`p-2 rounded-full ${
               inStock
                 ? 'bg-primary text-white hover:bg-primary/90'
                 : 'bg-gray-200 text-gray-400 cursor-not-allowed'
             }`}
             disabled={!inStock}
+          
           >
             <ShoppingCart className="h-4 w-4" />
           </button>
