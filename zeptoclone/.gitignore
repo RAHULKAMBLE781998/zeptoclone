@@ -1,0 +1,8 @@
+/node_modules
+/build
+/dist
+/coverage
+/public/index.html
+/public/manifest.json
+/public/robots.txt
+/server/node_modules

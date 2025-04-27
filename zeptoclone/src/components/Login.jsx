@@ -1,7 +1,6 @@
-jsx
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useAuth } from '../../components/AuthProvider';
+import { useAuth } from '../context/AuthContext';
 
 function LoginPage() {
   const [username, setUsername] = useState('');
